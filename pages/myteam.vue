@@ -14,7 +14,6 @@ export default {
   data: function () {
     return {
       showFiltering: false,
-      unsubscribe: '',
     }
   },
   computed: {

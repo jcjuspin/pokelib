@@ -5,6 +5,24 @@
   </div>
 </template>
 
+<script>
+export default {
+  middleware({ store }) {
+    store.subscribe((mutation, state) => {
+      if (
+        mutation.type === 'myTeam/addPokemon' ||
+        mutation.type === 'myTeam/removePokemon'
+      ) {
+        localStorage.setItem(
+          'myTeamData',
+          JSON.stringify(state.myTeam.stateMyTeamList)
+        )
+      }
+    })
+  },
+}
+</script>
+
 <style>
 .bg-image {
   margin: 0;

@@ -17,7 +17,7 @@ const mutations: MutationTree<State> = {
     if(localStorage.getItem('myTeamData')) {
       const dataString = localStorage.getItem('myTeamData')
       const data = dataString ? JSON.parse(dataString) : []
-      Object.assign(state.stateMyTeamList, data)
+      state.stateMyTeamList = data
     }
   },
 }

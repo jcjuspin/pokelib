@@ -37,18 +37,6 @@ export default {
       return pokemon
     })
     this.setPokemonData(pokemonDataList)
-
-    this.$store.subscribe((mutation, state) => {
-      if (
-        mutation.type === 'myTeam/addPokemon' ||
-        mutation.type === 'myTeam/removePokemon'
-      ) {
-        localStorage.setItem(
-          'myTeamData',
-          JSON.stringify(state.myTeam.stateMyTeamList)
-        )
-      }
-    })
   },
   mounted() {
     AOS.init({})
