@@ -2,8 +2,6 @@ import { ActionTree, ActionContext } from 'vuex'
 import { State, Pokemon } from './state'
 import RootState from '~/store/types'
 
-// création d'une interface pour toutes mes actions
-// est ce que ça marche si je retire RootState partout dans ce fichier??!
 export interface Actions<S, R> extends ActionTree<S, R> {
   setPokemonData(context: ActionContext<S, R>, list: Array<Pokemon>): void
   setPokemonVisibility(context: ActionContext<S, R>, pokemonIndex: number): void

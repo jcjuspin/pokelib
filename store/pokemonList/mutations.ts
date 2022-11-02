@@ -1,8 +1,6 @@
 import { MutationTree } from 'vuex'
 import { State, Pokemon } from './state'
 
-// pkoi ne pas mettre une interface ici aussi? c'est trop?!
-
 const mutations: MutationTree<State> = {
   setPokemonData(state, list: Array<Pokemon>) {
     state.statePokemonDataList = list
