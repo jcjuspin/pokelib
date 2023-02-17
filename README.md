@@ -1,4 +1,5 @@
 réalisation d'une application pokedex qui communique avec l'API https://pokeapi.co
+
 stack : nuxt
 
 ## Build Setup
